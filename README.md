@@ -26,6 +26,24 @@ Il était possible d'accéder aux différents fichiers JSP du projet sans avoir 
 
 Mais maintenant nous sommes bloqué depuis presque 5 jours sans aucunes avancées sur le déploiement.
 
+#### Update deploiement
+
+J'ai réussi à déployer l'application complètement.
+
+Il a fallu déplacer certains dossiers dans les sources.
+
+Tout d'abord, les dossiers JSP, JS, style, META-INF et WEB-INF, qui se trouvaient dans src/main/webapps, doivent maintenant être situés dans le dossier WebContent à la racine des sources.
+
+Le fichier struts.xml a également dû être déplacé à la racine du dossier src.
+
+Suite à ces modifications, l'application se lance correctement, mais il reste à configurer la base de données.
+
+J'ai créé un serveur avec XAMPP, importé le dump de la base de données, et modifié le fichier applicationContext.xml en y ajoutant mes informations de connexion.
+
+Et l'application fonctionne maintenant parfaitement !
+
+### Base de données
+
 En ce qui touche à la base de données, suite à une analyse approfondie, il a été constaté que les données relatives aux utilisateurs et aux comptes présentent des incohérences notables, voire des lacunes. Par conséquent, plusieurs modifications et ajouts d'attributs seront apportés à chaque table.
 
 Il est à noter qu'un jeu d'essai plus représentatif est actuellement en cours de production.
