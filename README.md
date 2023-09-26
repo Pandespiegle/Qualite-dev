@@ -26,3 +26,6 @@ Il était possible d'accéder aux différents fichiers JSP du projet sans avoir 
 
 Mais maintenant nous sommes bloqué depuis presque 5 jours sans aucunes avancées sur le déploiement.
 
+En ce qui touche à la base de données, suite à une analyse approfondie, il a été constaté que les données relatives aux utilisateurs et aux comptes présentent des incohérences notables, voire des lacunes. Par conséquent, plusieurs modifications et ajouts d'attributs seront apportés à chaque table.
+
+Il est à noter qu'un jeu d'essai plus représentatif est actuellement en cours de production.
