@@ -47,3 +47,13 @@ Et l'application fonctionne maintenant parfaitement !
 En ce qui touche à la base de données, suite à une analyse approfondie, il a été constaté que les données relatives aux utilisateurs et aux comptes présentent des incohérences notables, voire des lacunes. Par conséquent, plusieurs modifications et ajouts d'attributs seront apportés à chaque table.
 
 Il est à noter qu'un jeu d'essai plus représentatif est actuellement en cours de production.
+
+# Semaine 39
+
+### Tests 
+
+Afin de faire fonctionner les tests, il a seulement fallu importer la base de données de tests et adapter les chaines de connexions dans les fichier TestsBanquesManager-context.xml et TestsDaoHibernate-context.xml.
+
+### Upgrade des versions 
+
+Une branche versions_upgrade a été créée pour commencer à mettre à jour les plugins et dépendances du projet. Les mises à jours aux dans les dernières versions qui passent les tests ont été commits, cependant  certaines dépendances comme spring (à partir de la v6) vont nécessiter des changements dans le code afin de pouvoir refaire fonctionner le projet.
