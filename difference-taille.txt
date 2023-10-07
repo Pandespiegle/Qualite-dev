@@ -1,0 +1,1 @@
+On peut constater que les sources compressées passent de 59Mo à 116Ko car le projat n'a pas encore été compilé et il n'a donc pas le dossier target qui est très lourd.
