@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.iut.banque</groupId>
-	<artifactId>_00_ASBank2018</artifactId>
+	<artifactId>_00_ASBank2023</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>_00_ASBank2018</name>
+	<name>_00_ASBank2023</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,7 +48,7 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<path>/ASBank-2018</path>
+					<path>/ASBank-2023</path>
 				</configuration>
 			</plugin>
 		</plugins>
