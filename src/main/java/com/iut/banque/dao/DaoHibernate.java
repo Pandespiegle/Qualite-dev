@@ -201,7 +201,12 @@ public class DaoHibernate implements IDao {
 			if (user == null) {
 				return false;
 			}
-			return (BCrypt.checkpw(userPwd, user.getUserPwd()));
+			try{
+				return (BCrypt.checkpw(userPwd, user.getUserPwd()));
+			}
+			catch(Exception e){
+				return false;
+			}
 
 
 	}

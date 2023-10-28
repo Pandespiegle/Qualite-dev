@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_00_ASBank2023.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" afterDir="false" />
-    </list>
+    <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "bugs__fix",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "C:/Users/hugot/Desktop/Qualite-dev",
     "node.js.detected.package.eslint": "true",
