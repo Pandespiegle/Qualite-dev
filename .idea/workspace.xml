@@ -10,37 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00_ASBank2023.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/.jsdtscope" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.ltk.core.refactoring.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.wtp.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.validation.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.ws.service.policy.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.hibernate.eclipse.console.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Connect-Manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Connect-Manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Connect-error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Connect-error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Connect.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Connect.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/CreerCompte.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/CreerCompte.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/CreerUtilisateur.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/CreerUtilisateur.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/DetailCompte.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/DetailCompte.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/DetailCompteEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/DetailCompteEdit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/ResultatSuppression.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/ResultatSuppression.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,10 +55,12 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "6e8192a281ac5e382652e63ae2f9cbfe",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -142,7 +119,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="_00_ASBank2023:war exploded">
@@ -257,6 +234,7 @@
       <workItem from="1696664794901" duration="249000" />
       <workItem from="1696665060830" duration="65000" />
       <workItem from="1696665844304" duration="881000" />
+      <workItem from="1698497476481" duration="517000" />
     </task>
     <servers />
   </component>
