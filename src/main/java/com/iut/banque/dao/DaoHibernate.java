@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.transaction.annotation.Transactional;
 
+import org.mindrot.jbcrypt.BCrypt;
 import com.iut.banque.exceptions.IllegalFormatException;
 import com.iut.banque.exceptions.IllegalOperationException;
 import com.iut.banque.exceptions.TechnicalException;
@@ -147,16 +148,16 @@ public class DaoHibernate implements IDao {
 			String userPwd, boolean manager, String numClient)
 			throws TechnicalException, IllegalArgumentException, IllegalFormatException {
 		Session session = sessionFactory.getCurrentSession();
-
+		String hashedPassword = BCrypt.hashpw(userPwd, BCrypt.gensalt(10));
 		Utilisateur user = session.get(Utilisateur.class, userId);
 		if (user != null) {
 			throw new TechnicalException("User Id déjà utilisé.");
 		}
 
 		if (manager) {
-			user = new Gestionnaire(nom, prenom, adresse, male, userId, userPwd);
+			user = new Gestionnaire(nom, prenom, adresse, male, userId, hashedPassword);
 		} else {
-			user = new Client(nom, prenom, adresse, male, userId, userPwd, numClient);
+			user = new Client(nom, prenom, adresse, male, userId, hashedPassword, numClient);
 		}
 		session.save(user);
 
@@ -190,22 +191,19 @@ public class DaoHibernate implements IDao {
 	@Override
 	public boolean isUserAllowed(String userId, String userPwd) {
 		Session session = null;
-		if (userId == null || userPwd == null) {
+		if (userId == null || userPwd == null || userId.isEmpty() || userPwd.isEmpty()) {
 			return false;
-		} else {
+		}
 			session = sessionFactory.openSession();
 			userId = userId.trim();
-			if ("".equals(userId) || "".equals(userPwd)) {
+			session = sessionFactory.getCurrentSession();
+			Utilisateur user = session.get(Utilisateur.class, userId);
+			if (user == null) {
 				return false;
-			} else {
-				session = sessionFactory.getCurrentSession();
-				Utilisateur user = session.get(Utilisateur.class, userId);
-				if (user == null) {
-					return false;
-				}
-				return (userPwd.equals(user.getUserPwd()));
 			}
-		}
+			return (BCrypt.checkpw(userPwd, user.getUserPwd()));
+
+
 	}
 
 	/**

@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
+import org.mindrot.jbcrypt.BCrypt;
 
 import com.iut.banque.dao.DaoHibernate;
 import com.iut.banque.exceptions.IllegalFormatException;
@@ -222,7 +223,7 @@ public class TestsDaoHibernate {
 			assertEquals("PRENOM", user.getPrenom());
 			assertEquals("ADRESSE", user.getAdresse());
 			assertEquals("c.new1", user.getUserId());
-			assertEquals("PASS", user.getUserPwd());
+			assertTrue(BCrypt.checkpw("PASS", user.getUserPwd()));
 			assertTrue(user.isMale());
 		} catch (TechnicalException he) {
 			fail("L'utilisateur aurait du être créé.");
