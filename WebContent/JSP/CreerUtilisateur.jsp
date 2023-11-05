@@ -24,6 +24,7 @@
 		<s:textfield label="Code utilisateur" name="userId" />
 		<s:textfield label="Nom" name="nom" />
 		<s:textfield label="Prenom" name="prenom" />
+		<s:textfield label="Email" name="email" />
 		<s:textfield label="Adresse" name="adresse" />
 		<s:password label="Password" name="userPwd" />
 		<s:radio label="Sexe" name="male" list="#{true:'Homme',false:'Femme'}"

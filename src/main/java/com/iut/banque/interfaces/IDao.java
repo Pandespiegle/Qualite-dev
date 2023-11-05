@@ -107,7 +107,7 @@ public interface IDao {
 	 * @throws IllegalFormatException 
 	 * @throws IllegalArgumentException 
 	 */
-	Utilisateur createUser(String nom, String prenom, String adresse,
+	Utilisateur createUser(String nom, String prenom, String email, String adresse,
 			boolean male, String usrId, String usrPwd, boolean manager,
 			String numClient) throws TechnicalException, IllegalArgumentException, IllegalFormatException;
 
@@ -130,7 +130,7 @@ public interface IDao {
 	 *            : un objet de type Utilisateur (Client ou Gestionnaire)
 	 *            correspondant à celui qu'on veut mettre à jour
 	 */
-	void updateUser(Utilisateur u);
+	void  updateUser(Utilisateur u);
 
 	/**
 	 * Méthode pour vérifier la connection de l'utilisateur. Confronte le mot de

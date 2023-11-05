@@ -144,7 +144,7 @@ public class DaoHibernate implements IDao {
 	 * @throws IllegalArgumentException
 	 */
 	@Override
-	public Utilisateur createUser(String nom, String prenom, String adresse, boolean male, String userId,
+	public Utilisateur createUser(String nom, String prenom,String email, String adresse,  boolean male, String userId,
 			String userPwd, boolean manager, String numClient)
 			throws TechnicalException, IllegalArgumentException, IllegalFormatException {
 		Session session = sessionFactory.getCurrentSession();
@@ -155,9 +155,9 @@ public class DaoHibernate implements IDao {
 		}
 
 		if (manager) {
-			user = new Gestionnaire(nom, prenom, adresse, male, userId, hashedPassword);
+			user = new Gestionnaire(nom, prenom,email,  adresse, male, userId, hashedPassword);
 		} else {
-			user = new Client(nom, prenom, adresse, male, userId, hashedPassword, numClient);
+			user = new Client(nom, prenom, email, adresse, male, userId, hashedPassword, numClient);
 		}
 		session.save(user);
 

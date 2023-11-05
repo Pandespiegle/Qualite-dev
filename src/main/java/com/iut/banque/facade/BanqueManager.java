@@ -74,6 +74,8 @@ public class BanqueManager {
 	public void crediter(Compte compte, double montant) throws IllegalFormatException {
 		bank.crediter(compte, montant);
 		dao.updateAccount(compte);
+		//System.out.println(compte.getOwner());
+		//dao.updateUser(compte.getOwner());
 	}
 
 	/**
@@ -93,6 +95,9 @@ public class BanqueManager {
 	public void debiter(Compte compte, double montant) throws InsufficientFundsException, IllegalFormatException {
 		bank.debiter(compte, montant);
 		dao.updateAccount(compte);
+		//System.out.println(compte.getOwner().getEmail());
+		//dao.updateUser(compte.getOwner());
+
 	}
 
 	/**
@@ -207,9 +212,9 @@ public class BanqueManager {
 	 * @throws IllegalFormatException
 	 * @throws IllegalArgumentException
 	 */
-	public void createManager(String userId, String userPwd, String nom, String prenom, String adresse, boolean male)
+	public void createManager(String userId, String userPwd, String nom, String prenom, String email, String adresse, boolean male)
 			throws TechnicalException, IllegalArgumentException, IllegalFormatException {
-		dao.createUser(nom, prenom, adresse, male, userId, userPwd, true, null);
+		dao.createUser(nom, prenom, email, adresse, male, userId, userPwd, true, null);
 	}
 
 	/**
@@ -236,7 +241,7 @@ public class BanqueManager {
 	 * @throws IllegalFormatException
 	 * @throws IllegalArgumentException
 	 */
-	public void createClient(String userId, String userPwd, String nom, String prenom, String adresse, boolean male,
+	public void createClient(String userId, String userPwd, String nom, String prenom, String email, String adresse, boolean male,
 			String numeroClient)
 			throws IllegalOperationException, TechnicalException, IllegalArgumentException, IllegalFormatException {
 		Map<String, Client> liste = this.getAllClients();
@@ -246,7 +251,7 @@ public class BanqueManager {
 						"Un client avec le numero de client " + numeroClient + " existe déjà");
 			}
 		}
-		dao.createUser(nom, prenom, adresse, male, userId, userPwd, false, numeroClient);
+		dao.createUser(nom, prenom, email, adresse, male, userId,  userPwd, false, numeroClient);
 
 	}
 

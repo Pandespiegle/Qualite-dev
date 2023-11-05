@@ -212,7 +212,7 @@ public class TestsDaoHibernate {
 	public void testCreateUser() {
 		try {
 			try {
-				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", true, "c.new1", "PASS", false, "5544554455");
+				daoHibernate.createUser("NOM", "PRENOM", "EMAIL", "ADRESSE", true, "c.new1", "PASS", false, "5544554455");
 			} catch (IllegalArgumentException e) {
 				fail("Il ne devrait pas y avoir d'exception ici");
 			} catch (IllegalFormatException e) {
@@ -221,6 +221,7 @@ public class TestsDaoHibernate {
 			Utilisateur user = daoHibernate.getUserById("c.new1");
 			assertEquals("NOM", user.getNom());
 			assertEquals("PRENOM", user.getPrenom());
+			assertEquals("EMAIL", user.getEmail());
 			assertEquals("ADRESSE", user.getAdresse());
 			assertEquals("c.new1", user.getUserId());
 			assertTrue(BCrypt.checkpw("PASS", user.getUserPwd()));
@@ -234,7 +235,7 @@ public class TestsDaoHibernate {
 	public void testCreateUserExistingId() {
 		try {
 			try {
-				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", true, "c.exist", "PASS", false, "9898989898");
+				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE","EMAIL", true, "c.exist", "PASS", false, "9898989898");
 			} catch (IllegalArgumentException e) {
 				fail("Il ne devrait pas y avoir d'exception ici");
 				e.printStackTrace();
@@ -252,7 +253,7 @@ public class TestsDaoHibernate {
 	public void testCreateGestionnaire() {
 		try {
 			try {
-				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", true, "g.new", "PASS", true, "9898989898");
+				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", "EMAIL",true, "g.new", "PASS", true, "9898989898");
 			} catch (IllegalArgumentException | IllegalFormatException e) {
 				fail("Il ne devrait pas y avoir d'exception ici");
 				e.printStackTrace();
@@ -270,7 +271,7 @@ public class TestsDaoHibernate {
 	public void testCreateClient() {
 		try {
 			try {
-				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", true, "c.new1", "PASS", false, "9898989898");
+				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE","EMAIL", true, "c.new1", "PASS", false, "9898989898");
 			} catch (IllegalArgumentException | IllegalFormatException e) {
 				fail("Il ne devrait pas y avoir d'exception ici");
 				e.printStackTrace();
