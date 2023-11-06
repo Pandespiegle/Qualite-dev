@@ -10,20 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/CreerUtilisateur.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/CreerUtilisateur.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/interfaces/IDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/interfaces/IDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Gestionnaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Gestionnaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Utilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/facade/TestsBanqueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/facade/TestsBanqueManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +235,8 @@
       <workItem from="1698929958635" duration="839000" />
       <workItem from="1699182653398" duration="2259000" />
       <workItem from="1699190247092" duration="460000" />
-      <workItem from="1699196157900" duration="4952000" />
+      <workItem from="1699196157900" duration="5316000" />
+      <workItem from="1699219513659" duration="343000" />
     </task>
     <servers />
   </component>
