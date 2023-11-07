@@ -157,7 +157,8 @@ public class DaoHibernate implements IDao {
 		if (manager) {
 			user = new Gestionnaire(nom, prenom,email,  adresse, male, userId, hashedPassword);
 		} else {
-			user = new Client(nom, prenom, email, adresse, male, userId, hashedPassword, numClient);
+			user = new Client(nom, prenom, email, adresse,
+					male, userId, hashedPassword, numClient);
 		}
 		session.save(user);
 
@@ -198,13 +199,20 @@ public class DaoHibernate implements IDao {
 			userId = userId.trim();
 			session = sessionFactory.getCurrentSession();
 			Utilisateur user = session.get(Utilisateur.class, userId);
-			if (user == null) {
+			if (user == null || user.getErrorLogin() >= 3) {
 				return false;
 			}
 			try{
-				return (BCrypt.checkpw(userPwd, user.getUserPwd()));
+				if((BCrypt.checkpw(userPwd, user.getUserPwd()))){
+					return true;
+				}
+				else {
+					user.setErrorLogin(user.getErrorLogin() + 1);
+					return false;
+				}
 			}
 			catch(Exception e){
+				user.setErrorLogin(user.getErrorLogin() + 1);
 				return false;
 			}
 

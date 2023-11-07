@@ -76,6 +76,12 @@ public abstract class Utilisateur {
 	private boolean male;
 
 	/**
+	 * Le nombre de mauvais essais de connexion
+	 */
+	@Column(name = "errorLogin")
+	private int errorLogin;
+
+	/**
 	 * @return String, le nom de l'utilisateur.
 	 */
 	public String getNom() {
@@ -182,6 +188,21 @@ public abstract class Utilisateur {
 	}
 
 	/**
+	 * @return errorLogin :le nombre de mauvais essais de connexion
+	 */
+	public int getErrorLogin() {
+		return errorLogin;
+	}
+
+	/**
+	 * @param errorLogin
+	 *            : le nombre de mauvais essais de connexion
+	 */
+	public void setErrorLogin(int errorLogin) {
+		this.errorLogin = errorLogin;
+	}
+
+	/**
 	 * Constructeur de Utilisateur avec tous les champs de la classe comme
 	 * paramètres.
 	 * 
@@ -226,7 +247,7 @@ public abstract class Utilisateur {
 	@Override
 	public String toString() {
 		return "Utilisateur [userId=" + userId + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse=" + adresse
-				+ ", male=" + male + ", userPwd=" + userPwd + "]";
+				+ ", male=" + male + ", userPwd=" + userPwd + ", errorLogin" + errorLogin +"]";
 	}
 
 }

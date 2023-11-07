@@ -1,9 +1,5 @@
 package com.iut.banque.test.dao;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
 import java.util.Map;
 
 import org.junit.Test;
@@ -24,6 +20,8 @@ import com.iut.banque.modele.CompteAvecDecouvert;
 import com.iut.banque.modele.CompteSansDecouvert;
 import com.iut.banque.modele.Gestionnaire;
 import com.iut.banque.modele.Utilisateur;
+
+import static org.junit.Assert.*;
 
 /**
  * Class de test pour la DAO.
@@ -341,7 +339,26 @@ public class TestsDaoHibernate {
 		assertEquals(false, daoHibernate.isUserAllowed("   ", "TEST PASS"));
 		assertEquals(false, daoHibernate.isUserAllowed("    ", "TEST PASS"));
 	}
+	@Test
+	public void testIsErrorLoginIncremented(){
+		assertEquals(0, daoHibernate.getUserById("c.exist").getErrorLogin());
 
+		daoHibernate.isUserAllowed("c.exist", "WRONG PASS");
+		assertEquals(1, daoHibernate.getUserById("c.exist").getErrorLogin());
+
+		daoHibernate.isUserAllowed("c.exist", "TEST PASS");
+		assertEquals(1, daoHibernate.getUserById("c.exist").getErrorLogin());
+	}
+	@Test
+	public void testIsAccountBlocked(){
+		assertTrue(daoHibernate.isUserAllowed("c.exist", "TEST PASS"));
+		for (int i = 0; i < 3; i++) {
+			daoHibernate.isUserAllowed("c.exist", "WRONG PASS");
+		}
+		assertEquals(3, daoHibernate.getUserById("c.exist").getErrorLogin());
+	 	assertFalse(daoHibernate.isUserAllowed("c.exist", "TEST PASS"));
+
+	}
 	// TODO À implémenter lorsque disconnect() le sera
 	/*
 	 * @Test public void testDisconnect() { fail("Not yet implemented"); }
