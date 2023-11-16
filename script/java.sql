@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 06 nov. 2023 à 11:34
+-- Généré le : jeu. 16 nov. 2023 à 15:35
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -67,19 +67,22 @@ CREATE TABLE `utilisateur` (
   `userPwd` varchar(200) DEFAULT NULL,
   `male` bit(1) NOT NULL,
   `type` varchar(10) NOT NULL,
-  `numClient` varchar(45) DEFAULT NULL
+  `numClient` varchar(45) DEFAULT NULL,
+  `errorLogin` int(11) NOT NULL DEFAULT 0,
+  `recupToken` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`userId`, `nom`, `prenom`, `email`, `adresse`, `userPwd`, `male`, `type`, `numClient`) VALUES
-('a', 'a', 'a', 'a.a@gmail.com', 'a', '$2a$10$WEIrKca2yi4z0aF5ReF9dubm2gtt/XDMCNxvUOw2a/BGMQKmw.mTC', b'1', 'MANAGER', NULL),
-('a.lidell1', 'Lidell', 'Alice', 'alice.lidell@gmail.com', '789, grande rue, Metz', '$2a$10$H9lUPbRaRxowKslcgbiUo.kB2CRxBGB2QxLOjLo9cNiVu8eV1Tis.', b'1', 'CLIENT', '9865432100'),
-('admin', 'Smith', 'Joe', 'joe.smith@gmail.com', '123, grande rue, Metz', '$2a$10$AxpGpzLYT7y5vM6Bj6SiUOnXBIYilXyUx3hPMwcSVnL7Gpk9mWwKK', b'1', 'MANAGER', ''),
-('client1', 'client1', 'Jane', 'jane@hotmail.fr', '45, grand boulevard, Brest', '$2a$10$uODYUq3gR5jzpf/hGWQR6OTT7vkbol0JFX6zCZ469VhlKy/XkPgs6', b'1', 'CLIENT', '123456789'),
-('client2', 'client2', 'Jane', 'jane@orange.fr', '45, grand boulevard, Brest', '$2a$10$DuO1vfkcfoos6rx9ANBhVOVW1CzstA3dw29mjlu7GH9LR6P2lyS7G', b'1', 'CLIENT', '123456788');
+INSERT INTO `utilisateur` (`userId`, `nom`, `prenom`, `email`, `adresse`, `userPwd`, `male`, `type`, `numClient`, `errorLogin`, `recupToken`) VALUES
+('a', 'a', 'a', 'a.a@gmail.com', 'a', '$2a$10$WEIrKca2yi4z0aF5ReF9dubm2gtt/XDMCNxvUOw2a/BGMQKmw.mTC', b'1', 'MANAGER', NULL, 0, ''),
+('a.lidell1', 'Lidell', 'Alice', 'alice.lidell@gmail.com', '789, grande rue, Metz', '$2a$10$H9lUPbRaRxowKslcgbiUo.kB2CRxBGB2QxLOjLo9cNiVu8eV1Tis.', b'1', 'CLIENT', '9865432100', 0, ''),
+('admin', 'Smith', 'Joe', 'joe.smith@gmail.com', '123, grande rue, Metz', '$2a$10$AxpGpzLYT7y5vM6Bj6SiUOnXBIYilXyUx3hPMwcSVnL7Gpk9mWwKK', b'1', 'MANAGER', '', 0, ''),
+('client1', 'client1', 'Jane', 'jane@hotmail.fr', '45, grand boulevard, Brest', '$2a$10$uODYUq3gR5jzpf/hGWQR6OTT7vkbol0JFX6zCZ469VhlKy/XkPgs6', b'1', 'CLIENT', '123456789', 0, ''),
+('client2', 'client2', 'Jane', 'jane@orange.fr', '45, grand boulevard, Brest', '$2a$10$DuO1vfkcfoos6rx9ANBhVOVW1CzstA3dw29mjlu7GH9LR6P2lyS7G', b'1', 'CLIENT', '123456788', 3, ''),
+('t.roth1', 'Roth', 'ThÃ©o', 'roththeo@hotmail.com', 'Metz', '$2a$10$pgvlaeXSqGWwrd4Kl0.39esTkAL8tU5iI2Ge3PsRMJ6iYlLi22.pu', b'1', 'CLIENT', '1000000001', 0, '-3zTi7HKJE2n_limKoMOG09s8QKWGpVRvymlPppiBQE1xSkGnZefECxIeUZV8Hek6E4');
 
 --
 -- Index pour les tables déchargées

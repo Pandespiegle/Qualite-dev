@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 06 nov. 2023 à 11:35
+-- Généré le : jeu. 16 nov. 2023 à 15:35
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -72,23 +72,25 @@ CREATE TABLE `utilisateur` (
   `userPwd` varchar(200) DEFAULT NULL,
   `male` bit(1) NOT NULL,
   `type` varchar(10) NOT NULL,
-  `numClient` varchar(45) DEFAULT NULL
+  `numClient` varchar(45) DEFAULT NULL,
+  `errorLogin` int(11) NOT NULL DEFAULT 0,
+  `recupToken` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`userId`, `nom`, `prenom`, `email`, `adresse`, `userPwd`, `male`, `type`, `numClient`) VALUES
-('a.lidell1', 'Lidell', 'Alice', 'alice.lidell@gmail.com', '789, grande rue, Metz', '$2a$10$EYBflZjGImGSACXUmUL7mu3VkrT6V7XvaWO1WdhPrt0i7VsOyaFky', b'1', 'CLIENT', '9865432100'),
-('admin', 'Smith', 'Joe', 'joe.smith@orange.fr', '123, grande rue, Metz', '$2a$10$Y3tW3G/3lRhIRBWaBtlIbekZ8Yyip6NQq1bAx17NM/o518YtAmUz6\n', b'1', 'MANAGER', ''),
-('c.exist', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$nMr7fz5PIVfhPsh4wn/HGOx0r7k9aH3C8Mbz5uQv7KkAB77YkBitm', b'1', 'CLIENT', '0101010101'),
-('g.descomptes', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$X58X8aMteWLG318JMHmwk.2nRjpJBIssvJQcJe3huW9joM3WiWPli\r\n', b'1', 'CLIENT', '1000000001'),
-('g.descomptesvides', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$2p9A9NTHzLKR5Q/JnTmNhuZ4lnAzaU/0pEFg4iwT/RjN42m/uId6O\r\n', b'1', 'CLIENT', '0000000002'),
-('g.exist', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$B8xt8lvnQGfuNnDFIQRGrO.jJP2Yk62P3GZsTQnzxNhuJ8ITKp9aW\r\n', b'1', 'CLIENT', '1010101010'),
-('g.pasdecompte', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$ZszuL1ZGWeUQ5TBJ4T.9ou0ObeoQhI92l8tmddRrcxhhYUcuYPuGe\r\n', b'1', 'CLIENT', '5544554455'),
-('j.doe1', 'Doe', 'Jane', 'jane.doe@gmail.fr', '456, grand boulevard, Brest', '$2a$10$msDI/BNH7Q2buWmWg1fyE.94tJLsOS3UjCZRK6qHKSO3/kw10Q5Bq\r\n', b'1', 'CLIENT', '1234567890'),
-('j.doe2', 'Doe', 'John', 'john.doe@gmail.fr', '457, grand boulevard, Perpignan', '$2a$10$msDI/BNH7Q2buWmWg1fyE.94tJLsOS3UjCZRK6qHKSO3/kw10Q5Bq\r\n', b'1', 'CLIENT', '0000000001');
+INSERT INTO `utilisateur` (`userId`, `nom`, `prenom`, `email`, `adresse`, `userPwd`, `male`, `type`, `numClient`, `errorLogin`, `recupToken`) VALUES
+('a.lidell1', 'Lidell', 'Alice', 'alice.lidell@gmail.com', '789, grande rue, Metz', '$2a$10$EYBflZjGImGSACXUmUL7mu3VkrT6V7XvaWO1WdhPrt0i7VsOyaFky', b'1', 'CLIENT', '9865432100', 0, ''),
+('admin', 'Smith', 'Joe', 'joe.smith@orange.fr', '123, grande rue, Metz', '$2a$10$Y3tW3G/3lRhIRBWaBtlIbekZ8Yyip6NQq1bAx17NM/o518YtAmUz6\n', b'1', 'MANAGER', '', 0, ''),
+('c.exist', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$nMr7fz5PIVfhPsh4wn/HGOx0r7k9aH3C8Mbz5uQv7KkAB77YkBitm', b'1', 'CLIENT', '0101010101', 0, ''),
+('g.descomptes', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$X58X8aMteWLG318JMHmwk.2nRjpJBIssvJQcJe3huW9joM3WiWPli\r\n', b'1', 'CLIENT', '1000000001', 0, ''),
+('g.descomptesvides', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$2p9A9NTHzLKR5Q/JnTmNhuZ4lnAzaU/0pEFg4iwT/RjN42m/uId6O\r\n', b'1', 'CLIENT', '0000000002', 0, ''),
+('g.exist', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$B8xt8lvnQGfuNnDFIQRGrO.jJP2Yk62P3GZsTQnzxNhuJ8ITKp9aW\r\n', b'1', 'CLIENT', '1010101010', 0, ''),
+('g.pasdecompte', 'TEST NOM', 'TEST PRENOM', 'test@test.com', 'TEST ADRESSE', '$2a$10$ZszuL1ZGWeUQ5TBJ4T.9ou0ObeoQhI92l8tmddRrcxhhYUcuYPuGe\r\n', b'1', 'CLIENT', '5544554455', 0, ''),
+('j.doe1', 'Doe', 'Jane', 'jane.doe@gmail.fr', '456, grand boulevard, Brest', '$2a$10$msDI/BNH7Q2buWmWg1fyE.94tJLsOS3UjCZRK6qHKSO3/kw10Q5Bq\r\n', b'1', 'CLIENT', '1234567890', 0, ''),
+('j.doe2', 'Doe', 'John', 'john.doe@gmail.fr', '457, grand boulevard, Perpignan', '$2a$10$msDI/BNH7Q2buWmWg1fyE.94tJLsOS3UjCZRK6qHKSO3/kw10Q5Bq\r\n', b'1', 'CLIENT', '0000000001', 0, '');
 
 --
 -- Index pour les tables déchargées
