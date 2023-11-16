@@ -59,6 +59,22 @@
 			<result>/JSP/Login.jsp</result>
 		</action>
 
+		<action name="redirectModifPw">
+			<result>/JSP/ModifPw.jsp</result>
+		</action>
+
+
+		<action name="sendMail" class="com.iut.banque.controller.Connect"
+				method="sendMail" >
+			<result name="SUCCESS">/JSP/Login.jsp</result>
+			<result name="ERROR">/JSP/Login.jsp</result>
+		</action>
+
+		<action name="modifPw" class="com.iut.banque.controller.ModifPw"
+				method="modifPw" >
+			<result >/JSP/Login.jsp</result>
+		</action>
+
 		<!-- Appel de la page compte avec un paramètre donné -->
 
 		<action name="urlDetail" class="com.iut.banque.controller.DetailCompte">

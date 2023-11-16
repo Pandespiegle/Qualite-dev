@@ -258,6 +258,17 @@ public class BanqueFacade {
 	}
 
 	/**
+	 * Méthode pour récupérer un objet Utilisateur basé sur son String identidiant
+	 *
+	 * @param idUser
+	 *            : String correspondant à l'ID du compte qu'on veut récupérer
+	 * @return Utilisateur : objet correspondant à celui demandé
+	 */
+	public Utilisateur getUser(String idUser) {
+		return banqueManager.getUserById(idUser);
+	}
+
+	/**
 	 * L'utilisateur connecté doit être un gestionnaire
 	 * 
 	 * Méthode pour changer le découvert autorisé d'un compte

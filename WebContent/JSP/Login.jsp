@@ -17,9 +17,16 @@
 		<s:password label="Password" name="userPwd" />
 		<s:submit name="submit" />
 	</s:form>
-		<s:form name="myFormRetour" action="retourAccueil" method="POST">
-			<s:submit name="Retour" value="Retour à l'accueil" />
-		</s:form>
+
+	<s:form name="formMail" action="sendMail" method="POST">
+		<p>Mot de passe oublié</p>
+		<s:textfield label="Code user" name="userCdeSendMail" />
+		<s:submit name="Envoyer"/>
+	</s:form>
+
+	<s:form name="myFormRetour" action="retourAccueil" method="POST">
+		<s:submit name="Retour" value="Retour à l'accueil" />
+	</s:form>
 </body>
 <jsp:include page="/JSP/Footer.jsp" />
 </html>

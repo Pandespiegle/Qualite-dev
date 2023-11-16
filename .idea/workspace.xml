@@ -10,15 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WebContent/JSP/ModifPw.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ModifPw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/MailSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/Connect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Gestionnaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Gestionnaire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Utilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/struts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,6 +50,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -243,10 +264,29 @@
       <workItem from="1699266731772" duration="2216000" />
       <workItem from="1699274592090" duration="3269000" />
       <workItem from="1699279984122" duration="1989000" />
+      <workItem from="1699348690248" duration="1364000" />
+      <workItem from="1699352138036" duration="2761000" />
+      <workItem from="1699365803123" duration="4236000" />
+      <workItem from="1699385008442" duration="776000" />
+      <workItem from="1699697342310" duration="3723000" />
+      <workItem from="1699709547879" duration="639000" />
+      <workItem from="1699724802539" duration="1508000" />
+      <workItem from="1699803434666" duration="5479000" />
+      <workItem from="1699814505992" duration="1855000" />
+      <workItem from="1699824298603" duration="773000" />
+      <workItem from="1699866008273" duration="1396000" />
+      <workItem from="1699883127522" duration="1777000" />
+      <workItem from="1699890796600" duration="599000" />
+      <workItem from="1699971783010" duration="1669000" />
+      <workItem from="1699975901254" duration="932000" />
+      <workItem from="1699976889564" duration="2379000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Qualite_dev$Tomcat_9_0_80.ic" NAME="Tomcat 9.0.80 Coverage Results" MODIFIED="1699699683827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -81,6 +81,10 @@ public abstract class Utilisateur {
 	@Column(name = "errorLogin")
 	private int errorLogin;
 
+	/** token qui pourra être envoyé par mail afin de vérifier que l'utilisateur possède l'adresse mail */
+	@Column(name = "recupToken")
+	private String recupToken;
+
 	/**
 	 * @return String, le nom de l'utilisateur.
 	 */
@@ -201,6 +205,16 @@ public abstract class Utilisateur {
 	public void setErrorLogin(int errorLogin) {
 		this.errorLogin = errorLogin;
 	}
+
+
+	/** @return String, le token lié à l'utilisateur pour recuperer son mot de passe*/
+	public String getRecupToken(){ return  recupToken; }
+
+	/**
+	 * @param recupToken
+	 *            : le token de récupération
+	 */	public void setRecupToken(String recupToken){ this.recupToken  = recupToken; }
+
 
 	/**
 	 * Constructeur de Utilisateur avec tous les champs de la classe comme

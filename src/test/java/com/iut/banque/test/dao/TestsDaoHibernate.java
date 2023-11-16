@@ -217,11 +217,14 @@ public class TestsDaoHibernate {
 				fail("Il ne devrait pas y avoir d'exception ici");
 			}
 			Utilisateur user = daoHibernate.getUserById("c.new1");
+
 			assertEquals("NOM", user.getNom());
 			assertEquals("PRENOM", user.getPrenom());
 			assertEquals("EMAIL", user.getEmail());
 			assertEquals("ADRESSE", user.getAdresse());
 			assertEquals("c.new1", user.getUserId());
+			assertNotEquals(null, user.getRecupToken());
+
 			assertTrue(BCrypt.checkpw("PASS", user.getUserPwd()));
 			assertTrue(user.isMale());
 		} catch (TechnicalException he) {
@@ -257,6 +260,8 @@ public class TestsDaoHibernate {
 				e.printStackTrace();
 			}
 			Utilisateur gestionnaire = daoHibernate.getUserById("g.new");
+			assertNull(null, gestionnaire.getRecupToken());
+
 			if (!(gestionnaire instanceof Gestionnaire)) {
 				fail("Cet utilisateur devrait être un gestionnaire.");
 			}
