@@ -96,7 +96,8 @@ public interface IDao {
 	 */
 	Compte getAccountById(String id);
 
-	/**
+
+    /**
 	 * Méthode pour créer un utilisateur (Client ou Gestionnaire)
 	 * 
 	 * @param Multiple

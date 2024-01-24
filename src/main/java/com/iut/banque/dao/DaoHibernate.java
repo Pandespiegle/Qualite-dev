@@ -136,7 +136,6 @@ public class DaoHibernate implements IDao {
 		Session session = sessionFactory.getCurrentSession();
 		return session.get(Compte.class, id);
 	}
-
 	/**
 	 * {@inheritDoc}
 	 * 
@@ -229,6 +228,8 @@ public class DaoHibernate implements IDao {
 		Utilisateur user = session.get(Utilisateur.class, id);
 		return user;
 	}
+
+
 
 	/**
 	 * {@inheritDoc}

@@ -51,8 +51,8 @@
 					<path>/ASBank-2023</path>
 				</configuration>
 			</plugin>
-		</plugins>
 
+		</plugins>
 	</build>
 	<dependencies>
 

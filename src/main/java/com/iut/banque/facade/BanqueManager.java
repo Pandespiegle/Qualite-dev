@@ -1,6 +1,7 @@
 package com.iut.banque.facade;
 
 import java.util.Map;
+import org.hibernate.SessionFactory;
 
 import com.iut.banque.exceptions.IllegalFormatException;
 import com.iut.banque.exceptions.IllegalOperationException;
@@ -13,6 +14,7 @@ import com.iut.banque.modele.Compte;
 import com.iut.banque.modele.CompteAvecDecouvert;
 import com.iut.banque.modele.Gestionnaire;
 import com.iut.banque.modele.Utilisateur;
+import org.hibernate.Session;
 
 public class BanqueManager {
 
@@ -74,6 +76,7 @@ public class BanqueManager {
 	public void crediter(Compte compte, double montant) throws IllegalFormatException {
 		bank.crediter(compte, montant);
 		dao.updateAccount(compte);
+
 		//System.out.println(compte.getOwner());
 		//dao.updateUser(compte.getOwner());
 	}
@@ -95,6 +98,7 @@ public class BanqueManager {
 	public void debiter(Compte compte, double montant) throws InsufficientFundsException, IllegalFormatException {
 		bank.debiter(compte, montant);
 		dao.updateAccount(compte);
+
 		//System.out.println(compte.getOwner().getEmail());
 		//dao.updateUser(compte.getOwner());
 
