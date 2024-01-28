@@ -53,6 +53,7 @@ public class Client extends Utilisateur {
 	 * 
 	 * @throws IllegalFormatException
 	 */
+	@Override
 	public void setUserId(String userId) throws IllegalFormatException {
 		if (!Client.checkFormatUserIdClient(userId)) {
 			throw new IllegalFormatException("L'identifiant n'est pas au bon format.");
@@ -113,7 +114,7 @@ public class Client extends Utilisateur {
 		setRecupToken(token);
 		setUserId(usrId);
 		setNumeroClient(numeroClient);
-		this.accounts = new HashMap<String, Compte>();
+		this.accounts = new HashMap<>();
 
 	}
 
@@ -134,6 +135,7 @@ public class Client extends Utilisateur {
 	 * 
 	 * @see java.lang.Object#toString()
 	 */
+	@Override
 	public String toString() {
 		return "Client [userId=" + getUserId() + ", nom=" + getNom() + ", prenom=" + getPrenom() + ", adresse="
 				+ getAdresse() + ", male=" + isMale() + ", userPwd=" + getUserPwd() + ", numeroClient=" + numeroClient
@@ -195,7 +197,7 @@ public class Client extends Utilisateur {
 	 *         correct, false sinon
 	 */
 	public static boolean checkFormatUserIdClient(String s) {
-		return Pattern.matches("^[a-z]\\.[a-z]+[1-9][0-9]*$", s);
+		return Pattern.matches("^[a-z]\\.[a-z]+[1-9]\\d*$", s);
 	}
 
 	/**
@@ -209,7 +211,7 @@ public class Client extends Utilisateur {
 	 *         correct, false sinon
 	 */
 	public static boolean checkFormatNumeroClient(String s) {
-		return Pattern.matches("[0-9]{10}", s);
+		return Pattern.matches("\\d{10}", s);
 	}
 
 	/**
@@ -237,7 +239,7 @@ public class Client extends Utilisateur {
 	 */
 	public Map<String, Compte> getComptesAvecSoldeNonNul() {
 		Map<String, Compte> comptes = this.getAccounts();
-		Map<String, Compte> res = new HashMap<String, Compte>();
+		Map<String, Compte> res = new HashMap<>();
 		for (Map.Entry<String, Compte> entry : comptes.entrySet()) {
 			if (entry.getValue().getSolde() != 0) {
 				res.put(entry.getKey(), entry.getValue());

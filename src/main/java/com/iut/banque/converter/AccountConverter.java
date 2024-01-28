@@ -1,5 +1,6 @@
 package com.iut.banque.converter;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.Map;
 
 import org.apache.struts2.util.StrutsTypeConverter;
@@ -20,8 +21,7 @@ import com.iut.banque.modele.Compte;
  * Compte.
  */
 public class AccountConverter extends StrutsTypeConverter {
-
-	/**
+	private static final Logger logger = LogManager.getLogger(AccountConverter.class);	/**
 	 * DAO utilisée pour récuperer les objets correspondants à l'id passé en
 	 * paramêtre de convertFromString.
 	 * 
@@ -40,19 +40,17 @@ public class AccountConverter extends StrutsTypeConverter {
 	 * @param dao
 	 */
 	public AccountConverter(IDao dao) {
-		System.out.println("=========================");
-		System.out.println("Création du convertisseur de compte");
+		logger.info("=========================");
+		logger.info("Création du convertisseur de compte");
 		AccountConverter.dao = dao;
-		//System.out.println("DAO injectée : " + dao);
 	}
 
 	/**
 	 * 	Constructeur sans paramêtre pour le AccountConverter
 	 */
 	public AccountConverter() {
-		System.out.println("=========================");
-		System.out.println("Création du convertisseur de compte");
-		//System.out.println("DAO : " + dao);
+		logger.info("=========================");
+		logger.info("Création du convertisseur de compte");
 	}
 
 	/**
@@ -62,7 +60,7 @@ public class AccountConverter extends StrutsTypeConverter {
 	@SuppressWarnings("rawtypes")
 	@Override
 	public Object convertFromString(Map context, String[] values, Class classe) {
-		Compte compte = (Compte) dao.getAccountById(values[0]);
+		Compte compte =  dao.getAccountById(values[0]);
 		if (compte == null) {
 			throw new TypeConversionException("Impossible de convertir la chaine suivante : " + values[0]);
 		}

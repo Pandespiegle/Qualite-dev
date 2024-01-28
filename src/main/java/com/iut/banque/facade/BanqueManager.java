@@ -26,7 +26,6 @@ public class BanqueManager {
 	 */
 	public BanqueManager() {
 		super();
-		// TODO injecter banque par Spring ?
 		bank = new Banque();
 	}
 
@@ -74,8 +73,7 @@ public class BanqueManager {
 	public void crediter(Compte compte, double montant) throws IllegalFormatException {
 		bank.crediter(compte, montant);
 		dao.updateAccount(compte);
-		//System.out.println(compte.getOwner());
-		//dao.updateUser(compte.getOwner());
+
 	}
 
 	/**
@@ -95,8 +93,7 @@ public class BanqueManager {
 	public void debiter(Compte compte, double montant) throws InsufficientFundsException, IllegalFormatException {
 		bank.debiter(compte, montant);
 		dao.updateAccount(compte);
-		//System.out.println(compte.getOwner().getEmail());
-		//dao.updateUser(compte.getOwner());
+
 
 	}
 
@@ -272,10 +269,10 @@ public class BanqueManager {
 			for (Map.Entry<String, Compte> entry : liste.entrySet()) {
 				this.deleteAccount(entry.getValue());
 			}
-		} else if (u instanceof Gestionnaire) {
-			if (bank.getGestionnaires().size() == 1) {
+		} else if (u instanceof Gestionnaire && bank.getGestionnaires().size() == 1) {
+
 				throw new IllegalOperationException("Impossible de supprimer le dernier gestionnaire de la banque");
-			}
+
 		}
 		this.bank.deleteUser(u.getUserId());
 		dao.deleteUser(u);

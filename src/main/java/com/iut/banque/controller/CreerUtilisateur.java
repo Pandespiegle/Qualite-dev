@@ -3,7 +3,8 @@ package com.iut.banque.controller;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import com.iut.banque.exceptions.IllegalFormatException;
 import com.iut.banque.exceptions.IllegalOperationException;
 import com.iut.banque.exceptions.TechnicalException;
@@ -11,7 +12,7 @@ import com.iut.banque.facade.BanqueFacade;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CreerUtilisateur extends ActionSupport {
-
+	private static final Logger logger = LogManager.getLogger(CreerUtilisateur.class);
 	private static final long serialVersionUID = 1L;
 	private BanqueFacade banque;
 	private String userId;
@@ -165,7 +166,7 @@ public class CreerUtilisateur extends ActionSupport {
 	 * Constructeur sans paramêtre de CreerUtilisateur
 	 */
 	public CreerUtilisateur() {
-		System.out.println("In Constructor from CreerUtilisateur class ");
+		logger.info("In Constructor from CreerUtilisateur class ");
 		ApplicationContext context = WebApplicationContextUtils
 				.getRequiredWebApplicationContext(ServletActionContext.getServletContext());
 		this.banque = (BanqueFacade) context.getBean("banqueFacade");
@@ -217,7 +218,7 @@ public class CreerUtilisateur extends ActionSupport {
 	public String creationUtilisateur() {
 		try {
 			if (client) {
-				System.out.println(email);
+				logger.info(email);
 				banque.createClient(userId, userPwd, nom, prenom, email, adresse, male, numClient);
 			} else {
 				banque.createManager(userId, userPwd, nom, prenom, email, adresse, male);

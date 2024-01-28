@@ -125,9 +125,9 @@ public class DetailCompte extends ActionSupport {
 	 *         ou pas)
 	 */
 	public String debit() {
-		Compte compte = getCompte();
+		Compte c = getCompte();
 		try {
-			banque.debiter(compte, Double.parseDouble(montant.trim()));
+			banque.debiter(c, Double.parseDouble(montant.trim()));
 			return "SUCCESS";
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
@@ -148,9 +148,9 @@ public class DetailCompte extends ActionSupport {
 	 *         ou pas)
 	 */
 	public String credit() {
-		Compte compte = getCompte();
+		Compte c = getCompte();
 		try {
-			banque.crediter(compte, Double.parseDouble(montant.trim()));
+			banque.crediter(c, Double.parseDouble(montant.trim()));
 			return "SUCCESS";
 		} catch (NumberFormatException nfe) {
 			nfe.printStackTrace();

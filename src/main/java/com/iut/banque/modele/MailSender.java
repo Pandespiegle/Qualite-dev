@@ -5,8 +5,8 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 public class MailSender {
 
-    private final String username = "bankiutmetz@gmail.com";
-    private final String password = "wfcm dxld pmyx gihd";
+    private static final String username = "bankiutmetz@gmail.com";
+    private static final String password = "wfcm dxld pmyx gihd";
 
     /**
      * Fonction d'envoi de mail
