@@ -10,38 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Connect-Manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Connect-Manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Connect-error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Connect-error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/CreerCompte.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/CreerCompte.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/CreerUtilisateur.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/CreerUtilisateur.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/DetailCompte.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/DetailCompte.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/DetailCompteEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/DetailCompteEdit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/ListeCompteManager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/ListeCompteManager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/Login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/ModifPw.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/ModifPw.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/JSP/ResultatSuppression.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/JSP/ResultatSuppression.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_00_ASBank2023.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_00_ASBank2023.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/Connect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerCompte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerCompte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/DetailCompte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/DetailCompte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/DetailCompteEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/DetailCompteEdit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/converter/AccountConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/converter/AccountConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/converter/ClientConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/converter/ClientConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/MailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/MailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Utilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/constants/TestsLoginConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/constants/TestsLoginConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SP2/SP2Jacoco.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SP2/SP2SonarLint.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +69,7 @@
       <recent name="C:\Users\hugot\Desktop\Qualite-dev\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Théo\Desktop\Qual dev\Qualite-dev\SP2" />
       <recent name="C:\Users\hugot\Desktop\Qualite-dev" />
       <recent name="C:\Users\hugot\Desktop\Qualite-dev\src" />
       <recent name="C:\Users\hugot\Desktop\Qualite-dev\script" />
@@ -297,7 +268,7 @@
       <workItem from="1706468550639" duration="122000" />
       <workItem from="1706468953580" duration="101000" />
       <workItem from="1706469775628" duration="2458000" />
-      <workItem from="1706473398411" duration="2322000" />
+      <workItem from="1706473398411" duration="2722000" />
     </task>
     <servers />
   </component>
