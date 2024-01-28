@@ -150,6 +150,28 @@ public class TestsDaoHibernate {
 	}
 
 	@Test
+	public void testUpdateAccountExist() {
+		Compte account = daoHibernate.getAccountById("SA1011011011");
+		double solde = account.getSolde();
+		double delta = 0.0001;
+		try {
+			account.crediter(10);
+		}catch (IllegalFormatException e){
+			fail("Problème de créditation du compte");
+		}
+		try {
+			daoHibernate.updateAccount(account);
+			assertEquals(daoHibernate.getAccountById("SA1011011011").getSolde(), solde+10.0, delta);
+		} catch (Exception e) {
+			fail("Le compte aurait du être supprimé.");
+		}
+
+
+
+	}
+
+
+	@Test
 	public void testGetUserByIdExist() {
 		Utilisateur user = daoHibernate.getUserById("c.exist");
 		if (user == null) {

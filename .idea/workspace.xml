@@ -10,23 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/constants/TestsLoginConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/controllers/TestsConnectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/facade/TestsBanqueFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestMail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/TestsBanqueFacade-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ModifPw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ModifPw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/interfaces/IDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/interfaces/IDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/constants/LoginConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/constants/LoginConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ModifPw.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/MailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/MailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="E:\Dev\Java\Qualite-dev\htmlReport" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
     </option>
@@ -51,6 +60,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2VvHreNIfy5oA7AeFxNNBPj0lwg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,7 +74,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;bugs__fix&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rotht/OneDrive/Bureau/Dev/QualiteDev/Qualite-dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Dev/Java/Qualite-dev/target/jacoco.exec&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -85,7 +97,10 @@
       <recent name="C:\Users\hugot\Desktop\Qualite-dev" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.80">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Qualite-dev/htmlReport/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="_00_ASBank2023 [clean,install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -131,7 +146,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="_00_ASBank2023:war exploded">
@@ -218,9 +233,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.index.html" />
       <item itemvalue="Maven._00_ASBank2023 [clean,install]" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.80" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration" cleanupOnStartRun="true">
@@ -278,15 +299,36 @@
       <workItem from="1701501035332" duration="3960000" />
       <workItem from="1701505227483" duration="5115000" />
       <workItem from="1706092792246" duration="607000" />
+      <workItem from="1706094270289" duration="1637000" />
+      <workItem from="1706369267382" duration="1818000" />
+      <workItem from="1706373055641" duration="1852000" />
+      <workItem from="1706375054296" duration="35000" />
+      <workItem from="1706433408901" duration="629000" />
+      <workItem from="1706437452850" duration="3506000" />
+      <workItem from="1706441761575" duration="1808000" />
+      <workItem from="1706443580452" duration="3792000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Qualite_dev$All_in__00_ASBank2023.ic" NAME="All in _00_ASBank2023 Coverage Results" MODIFIED="1699452117529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Qualite_dev$Tomcat_9_0_80.ic" NAME="Tomcat 9.0.80 Coverage Results" MODIFIED="1699699683827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Qualite_dev$Tomcat_9_0_80.ic" NAME="Tomcat 9.0.80 Coverage Results" MODIFIED="1706094862971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="$PROJECT_DIR$/target/jacoco.exec" NAME="jacoco.exec" MODIFIED="1706095201834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="E:\Dev\Java\Qualite-dev\target\jacoco.exec" NAME="jacoco.exec" MODIFIED="1706446326749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Qualite_dev$All_in__00_ASBank2023.ic" NAME="All in _00_ASBank2023 Coverage Results" MODIFIED="1700145724011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="../../../../OneDrive/Bureau/Dev/QualiteDev/Qualite-dev/target/jacoco.exec" NAME="jacoco.exec" MODIFIED="1700304354522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

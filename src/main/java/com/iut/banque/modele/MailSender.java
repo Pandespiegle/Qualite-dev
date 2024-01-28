@@ -37,7 +37,6 @@ public class MailSender {
             message.setText(body);
             Transport.send(message);
         } catch(MessagingException e){
-            System.out.println(e);
             return false;
         }
         return true;
