@@ -58,6 +58,12 @@ public abstract class Utilisateur {
 	private String prenom;
 
 	/**
+	 * L'adresse mail de l'utilisateur.
+	 */
+	@Column(name = "email")
+	private String email;
+
+	/**
 	 * L'adresse physique de l'utilisateur.
 	 */
 	@Column(name = "adresse")
@@ -68,6 +74,16 @@ public abstract class Utilisateur {
 	 */
 	@Column(name = "male")
 	private boolean male;
+
+	/**
+	 * Le nombre de mauvais essais de connexion
+	 */
+	@Column(name = "errorLogin")
+	private int errorLogin;
+
+	/** token qui pourra être envoyé par mail afin de vérifier que l'utilisateur possède l'adresse mail */
+	@Column(name = "recupToken")
+	private String recupToken;
 
 	/**
 	 * @return String, le nom de l'utilisateur.
@@ -97,6 +113,21 @@ public abstract class Utilisateur {
 	 */
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
+	}
+
+	/**
+	 * @return String, l'adresse email de l'utilisateur
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * @param email
+	 *            : l'adresse email de l'utilisateur
+	 */
+	public void setEmail(String email) {
+			this.email = email;
 	}
 
 	/**
@@ -161,6 +192,31 @@ public abstract class Utilisateur {
 	}
 
 	/**
+	 * @return errorLogin :le nombre de mauvais essais de connexion
+	 */
+	public int getErrorLogin() {
+		return errorLogin;
+	}
+
+	/**
+	 * @param errorLogin
+	 *            : le nombre de mauvais essais de connexion
+	 */
+	public void setErrorLogin(int errorLogin) {
+		this.errorLogin = errorLogin;
+	}
+
+
+	/** @return String, le token lié à l'utilisateur pour recuperer son mot de passe*/
+	public String getRecupToken(){ return  recupToken; }
+
+	/**
+	 * @param recupToken
+	 *            : le token de récupération
+	 */	public void setRecupToken(String recupToken){ this.recupToken  = recupToken; }
+
+
+	/**
 	 * Constructeur de Utilisateur avec tous les champs de la classe comme
 	 * paramètres.
 	 * 
@@ -174,10 +230,11 @@ public abstract class Utilisateur {
 	 * @param userId
 	 * @param userPwd
 	 */
-	public Utilisateur(String nom, String prenom, String adresse, boolean male, String userId, String userPwd) {
+	public Utilisateur(String nom, String prenom, String email, String adresse, boolean male, String userId, String userPwd) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
+		this.email = email;
 		this.adresse = adresse;
 		this.male = male;
 		this.userId = userId;
@@ -203,8 +260,8 @@ public abstract class Utilisateur {
 	 */
 	@Override
 	public String toString() {
-		return "Utilisateur [userId=" + userId + ", nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse
-				+ ", male=" + male + ", userPwd=" + userPwd + "]";
+		return "Utilisateur [userId=" + userId + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse=" + adresse
+				+ ", male=" + male + ", userPwd=" + userPwd + ", errorLogin" + errorLogin +"]";
 	}
 
 }

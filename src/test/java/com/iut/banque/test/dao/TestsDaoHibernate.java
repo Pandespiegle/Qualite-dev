@@ -1,29 +1,21 @@
 package com.iut.banque.test.dao;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.util.Map;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
-import org.mindrot.jbcrypt.BCrypt;
-
 import com.iut.banque.dao.DaoHibernate;
 import com.iut.banque.exceptions.IllegalFormatException;
 import com.iut.banque.exceptions.IllegalOperationException;
 import com.iut.banque.exceptions.TechnicalException;
-import com.iut.banque.modele.Client;
-import com.iut.banque.modele.Compte;
-import com.iut.banque.modele.CompteAvecDecouvert;
-import com.iut.banque.modele.CompteSansDecouvert;
-import com.iut.banque.modele.Gestionnaire;
-import com.iut.banque.modele.Utilisateur;
+import com.iut.banque.modele.*;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Map;
+
+import static org.junit.Assert.*;
 
 /**
  * Class de test pour la DAO.
@@ -152,6 +144,28 @@ public class TestsDaoHibernate {
 	}
 
 	@Test
+	public void testUpdateAccountExist() {
+		Compte account = daoHibernate.getAccountById("SA1011011011");
+		double solde = account.getSolde();
+		double delta = 0.0001;
+		try {
+			account.crediter(10);
+		}catch (IllegalFormatException e){
+			fail("Problème de créditation du compte");
+		}
+		try {
+			daoHibernate.updateAccount(account);
+			assertEquals(daoHibernate.getAccountById("SA1011011011").getSolde(), solde+10.0, delta);
+		} catch (Exception e) {
+			fail("Le compte aurait du être supprimé.");
+		}
+
+
+
+	}
+
+
+	@Test
 	public void testGetUserByIdExist() {
 		Utilisateur user = daoHibernate.getUserById("c.exist");
 		if (user == null) {
@@ -212,17 +226,21 @@ public class TestsDaoHibernate {
 	public void testCreateUser() {
 		try {
 			try {
-				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", true, "c.new1", "PASS", false, "5544554455");
+				daoHibernate.createUser("NOM", "PRENOM", "EMAIL", "ADRESSE", true, "c.new1", "PASS", false, "5544554455");
 			} catch (IllegalArgumentException e) {
 				fail("Il ne devrait pas y avoir d'exception ici");
 			} catch (IllegalFormatException e) {
 				fail("Il ne devrait pas y avoir d'exception ici");
 			}
 			Utilisateur user = daoHibernate.getUserById("c.new1");
+
 			assertEquals("NOM", user.getNom());
 			assertEquals("PRENOM", user.getPrenom());
+			assertEquals("EMAIL", user.getEmail());
 			assertEquals("ADRESSE", user.getAdresse());
 			assertEquals("c.new1", user.getUserId());
+			assertNotEquals(null, user.getRecupToken());
+
 			assertTrue(BCrypt.checkpw("PASS", user.getUserPwd()));
 			assertTrue(user.isMale());
 		} catch (TechnicalException he) {
@@ -234,7 +252,7 @@ public class TestsDaoHibernate {
 	public void testCreateUserExistingId() {
 		try {
 			try {
-				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", true, "c.exist", "PASS", false, "9898989898");
+				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE","EMAIL", true, "c.exist", "PASS", false, "9898989898");
 			} catch (IllegalArgumentException e) {
 				fail("Il ne devrait pas y avoir d'exception ici");
 				e.printStackTrace();
@@ -252,12 +270,14 @@ public class TestsDaoHibernate {
 	public void testCreateGestionnaire() {
 		try {
 			try {
-				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", true, "g.new", "PASS", true, "9898989898");
+				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", "EMAIL",true, "g.new", "PASS", true, "9898989898");
 			} catch (IllegalArgumentException | IllegalFormatException e) {
 				fail("Il ne devrait pas y avoir d'exception ici");
 				e.printStackTrace();
 			}
 			Utilisateur gestionnaire = daoHibernate.getUserById("g.new");
+			assertNull(null, gestionnaire.getRecupToken());
+
 			if (!(gestionnaire instanceof Gestionnaire)) {
 				fail("Cet utilisateur devrait être un gestionnaire.");
 			}
@@ -270,7 +290,7 @@ public class TestsDaoHibernate {
 	public void testCreateClient() {
 		try {
 			try {
-				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE", true, "c.new1", "PASS", false, "9898989898");
+				daoHibernate.createUser("NOM", "PRENOM", "ADRESSE","EMAIL", true, "c.new1", "PASS", false, "9898989898");
 			} catch (IllegalArgumentException | IllegalFormatException e) {
 				fail("Il ne devrait pas y avoir d'exception ici");
 				e.printStackTrace();
@@ -340,7 +360,26 @@ public class TestsDaoHibernate {
 		assertEquals(false, daoHibernate.isUserAllowed("   ", "TEST PASS"));
 		assertEquals(false, daoHibernate.isUserAllowed("    ", "TEST PASS"));
 	}
+	@Test
+	public void testIsErrorLoginIncremented(){
+		assertEquals(0, daoHibernate.getUserById("c.exist").getErrorLogin());
 
+		daoHibernate.isUserAllowed("c.exist", "WRONG PASS");
+		assertEquals(1, daoHibernate.getUserById("c.exist").getErrorLogin());
+
+		daoHibernate.isUserAllowed("c.exist", "TEST PASS");
+		assertEquals(1, daoHibernate.getUserById("c.exist").getErrorLogin());
+	}
+	@Test
+	public void testIsAccountBlocked(){
+		assertTrue(daoHibernate.isUserAllowed("c.exist", "TEST PASS"));
+		for (int i = 0; i < 3; i++) {
+			daoHibernate.isUserAllowed("c.exist", "WRONG PASS");
+		}
+		assertEquals(3, daoHibernate.getUserById("c.exist").getErrorLogin());
+	 	assertFalse(daoHibernate.isUserAllowed("c.exist", "TEST PASS"));
+
+	}
 	// TODO À implémenter lorsque disconnect() le sera
 	/*
 	 * @Test public void testDisconnect() { fail("Not yet implemented"); }

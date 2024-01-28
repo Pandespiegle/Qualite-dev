@@ -2,6 +2,7 @@ package com.iut.banque.controller;
 
 import java.util.Map;
 
+import com.iut.banque.modele.MailSender;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -19,6 +20,8 @@ public class Connect extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	private String userCde;
 	private String userPwd;
+
+	private String userCdeSendMail;
 	private BanqueFacade banque;
 
 	/**
@@ -94,6 +97,23 @@ public class Connect extends ActionSupport {
 	}
 
 	/**
+	 * Getter du champ userCde
+	 *
+	 * @return String, le userCde de la classe
+	 */
+	public String getUserCdeSendMail() {
+		return userCdeSendMail;
+	}
+
+	/**
+	 * Setter du champ userCde
+	 *
+	 * @param userCdeSendMail
+	 *            : String correspondant au userCode à établir
+	 */
+	public void setUserCdeSendMail(String userCdeSendMail){this.userCdeSendMail = userCdeSendMail;}
+
+	/**
 	 * Getter du champ userPwd
 	 * 
 	 * @return String, le userPwd de la classe
@@ -131,6 +151,25 @@ public class Connect extends ActionSupport {
 	 */
 	public Map<String, Compte> getAccounts() {
 		return ((Client) banque.getConnectedUser()).getAccounts();
+	}
+
+	public String sendMail(){
+		MailSender mailSender = new MailSender();
+
+		try {
+			Utilisateur user  = banque.getUser(userCdeSendMail);
+			String subject = "Changement de mot de passe";
+			String token = user.getRecupToken();
+			String body = "http://localhost:8080/_00_ASBank2023//JSP/redirectModifPw?token=" + token;
+			if (mailSender.sendMail(user.getEmail(), subject, body)){
+				return "SUCCESS";
+			}
+			else{
+				return "ERROR";
+			}
+		} catch (Exception e){
+			return "ERROR";
+		}
 	}
 
 	public String logout() {

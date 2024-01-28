@@ -182,10 +182,10 @@ public class BanqueFacade {
 	 * @throws IllegalFormatException
 	 * @throws IllegalArgumentException
 	 */
-	public void createManager(String userId, String userPwd, String nom, String prenom, String adresse, boolean male)
+	public void createManager(String userId, String userPwd, String nom, String prenom,String email, String adresse, boolean male)
 			throws TechnicalException, IllegalArgumentException, IllegalFormatException {
 		if (loginManager.getConnectedUser() instanceof Gestionnaire) {
-			banqueManager.createManager(userId, userPwd, nom, prenom, adresse, male);
+			banqueManager.createManager(userId, userPwd, nom, prenom, email, adresse, male);
 			;
 		}
 	}
@@ -210,11 +210,11 @@ public class BanqueFacade {
 	 * @throws IllegalFormatException
 	 * @throws IllegalArgumentException
 	 */
-	public void createClient(String userId, String userPwd, String nom, String prenom, String adresse, boolean male,
+	public void createClient(String userId, String userPwd, String nom, String prenom, String email, String adresse, boolean male,
 			String numeroClient)
 			throws IllegalOperationException, TechnicalException, IllegalArgumentException, IllegalFormatException {
 		if (loginManager.getConnectedUser() instanceof Gestionnaire) {
-			banqueManager.createClient(userId, userPwd, nom, prenom, adresse, male, numeroClient);
+			banqueManager.createClient(userId, userPwd, nom, prenom, email, adresse, male, numeroClient);
 		}
 	}
 
@@ -255,6 +255,17 @@ public class BanqueFacade {
 	 */
 	public Compte getCompte(String idCompte) {
 		return banqueManager.getAccountById(idCompte);
+	}
+
+	/**
+	 * Méthode pour récupérer un objet Utilisateur basé sur son String identidiant
+	 *
+	 * @param idUser
+	 *            : String correspondant à l'ID du compte qu'on veut récupérer
+	 * @return Utilisateur : objet correspondant à celui demandé
+	 */
+	public Utilisateur getUser(String idUser) {
+		return banqueManager.getUserById(idUser);
 	}
 
 	/**

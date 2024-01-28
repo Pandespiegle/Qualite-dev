@@ -1,5 +1,7 @@
 package com.iut.banque.modele;
 
+import java.security.SecureRandom;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -27,6 +29,9 @@ public class Client extends Utilisateur {
 	 */
 	@Column(name = "numClient", unique = true)
 	private String numeroClient;
+
+
+
 
 	/**
 	 * Map des comptes que le client possède. La clé de la Map est le numéro de
@@ -95,12 +100,21 @@ public class Client extends Utilisateur {
 	 * @throws IllegalFormatException
 	 * @throws IllegalArgumentException
 	 */
-	public Client(String nom, String prenom, String adresse, boolean homme, String usrId, String usrPwd,
+	public Client(String nom, String prenom,String email,  String adresse, boolean homme, String usrId, String usrPwd,
 			String numeroClient) throws IllegalArgumentException, IllegalFormatException {
-		super(nom, prenom, adresse, homme, null, usrPwd);
+		super(nom, prenom, email,  adresse, homme, null, usrPwd);
+
+		//créer le token qui lié a l'utilisateur qui servira a vérifier son adresse mail
+		SecureRandom random = new SecureRandom();
+		byte[] bytes = new byte[50];
+		random.nextBytes(bytes);
+		String token = Base64.getUrlEncoder().withoutPadding().encodeToString(bytes);
+
+		setRecupToken(token);
 		setUserId(usrId);
 		setNumeroClient(numeroClient);
 		this.accounts = new HashMap<String, Compte>();
+
 	}
 
 	/**
@@ -144,6 +158,8 @@ public class Client extends Utilisateur {
 	public Map<String, Compte> getAccounts() {
 		return accounts;
 	}
+
+
 
 	/**
 	 * Setter pour l'ensemble des comptes possedés par le client.

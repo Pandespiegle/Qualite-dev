@@ -136,7 +136,6 @@ public class DaoHibernate implements IDao {
 		Session session = sessionFactory.getCurrentSession();
 		return session.get(Compte.class, id);
 	}
-
 	/**
 	 * {@inheritDoc}
 	 * 
@@ -144,20 +143,22 @@ public class DaoHibernate implements IDao {
 	 * @throws IllegalArgumentException
 	 */
 	@Override
-	public Utilisateur createUser(String nom, String prenom, String adresse, boolean male, String userId,
+	public Utilisateur createUser(String nom, String prenom,String email, String adresse, boolean male, String userId,
 			String userPwd, boolean manager, String numClient)
 			throws TechnicalException, IllegalArgumentException, IllegalFormatException {
+
 		Session session = sessionFactory.getCurrentSession();
 		String hashedPassword = BCrypt.hashpw(userPwd, BCrypt.gensalt(10));
+
 		Utilisateur user = session.get(Utilisateur.class, userId);
 		if (user != null) {
 			throw new TechnicalException("User Id déjà utilisé.");
 		}
-
 		if (manager) {
-			user = new Gestionnaire(nom, prenom, adresse, male, userId, hashedPassword);
+			user = new Gestionnaire(nom, prenom,email,  adresse, male, userId, hashedPassword, null);
 		} else {
-			user = new Client(nom, prenom, adresse, male, userId, hashedPassword, numClient);
+			user = new Client(nom, prenom, email, adresse,
+					male, userId, hashedPassword, numClient);
 		}
 		session.save(user);
 
@@ -198,10 +199,22 @@ public class DaoHibernate implements IDao {
 			userId = userId.trim();
 			session = sessionFactory.getCurrentSession();
 			Utilisateur user = session.get(Utilisateur.class, userId);
-			if (user == null) {
+			if (user == null || user.getErrorLogin() >= 3) {
 				return false;
 			}
-			return (BCrypt.checkpw(userPwd, user.getUserPwd()));
+			try{
+				if((BCrypt.checkpw(userPwd, user.getUserPwd()))){
+					return true;
+				}
+				else {
+					user.setErrorLogin(user.getErrorLogin() + 1);
+					return false;
+				}
+			}
+			catch(Exception e){
+				user.setErrorLogin(user.getErrorLogin() + 1);
+				return false;
+			}
 
 
 	}
@@ -215,6 +228,8 @@ public class DaoHibernate implements IDao {
 		Utilisateur user = session.get(Utilisateur.class, id);
 		return user;
 	}
+
+
 
 	/**
 	 * {@inheritDoc}
@@ -237,7 +252,7 @@ public class DaoHibernate implements IDao {
 	@Override
 	public Map<String, Gestionnaire> getAllGestionnaires() {
 		Session session = sessionFactory.getCurrentSession();
-		@SuppressWarnings("unchecked")
+
 		List<Object> res = session.createCriteria(Gestionnaire.class).list();
 		Map<String, Gestionnaire> ret = new HashMap<String, Gestionnaire>();
 		for (Object gestionnaire : res) {

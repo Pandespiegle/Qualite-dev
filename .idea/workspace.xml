@@ -10,12 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_00_ASBank2023.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/bankiuttest.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/java.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ModifPw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/MailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/constants/TestsLoginConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/facade/TestsBanqueFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestMail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/TestsBanqueFacade-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00_ASBank2023.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_00_ASBank2023.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/dumpSQL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/dumpSQL_JUnitTest.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/interfaces/IDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/interfaces/IDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Gestionnaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Gestionnaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Utilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/struts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/facade/TestsBanqueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/facade/TestsBanqueManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,33 +61,37 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2VvHreNIfy5oA7AeFxNNBPj0lwg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hugot/Desktop/Qualite-dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;6e8192a281ac5e382652e63ae2f9cbfe&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Users/Théo/Desktop/test/Qualite-dev-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "spring.configuration.checksum": "f16cac87daadda926b9580ca789ed58b",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Théo\Desktop\test\Qualite-dev-master" />
       <recent name="C:\Users\hugot\Desktop\Qualite-dev\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -235,6 +261,8 @@
       <workItem from="1696665060830" duration="65000" />
       <workItem from="1696665844304" duration="881000" />
       <workItem from="1698497476481" duration="517000" />
+      <workItem from="1706468550639" duration="122000" />
+      <workItem from="1706468953580" duration="101000" />
     </task>
     <servers />
   </component>

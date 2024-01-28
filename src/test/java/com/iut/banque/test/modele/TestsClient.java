@@ -1,12 +1,13 @@
 package com.iut.banque.test.modele;
 
-import static org.junit.Assert.fail;
-
-import org.junit.Test;
-
 import com.iut.banque.modele.Client;
 import com.iut.banque.modele.CompteAvecDecouvert;
 import com.iut.banque.modele.CompteSansDecouvert;
+import org.junit.Assert;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class TestsClient {
 
@@ -144,7 +145,7 @@ public class TestsClient {
 	@Test
 	public void testMethodePossedeComptesADecouvertPourClientAvecQueDesComptesSansDecouvert() {
 		try {
-			Client c = new Client("John", "Doe", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
 			c.addAccount(new CompteSansDecouvert("FR1234567890", 42, c));
 			c.addAccount(new CompteSansDecouvert("FR1234567891", 0, c));
 			if (c.possedeComptesADecouvert()) {
@@ -158,7 +159,7 @@ public class TestsClient {
 	@Test
 	public void testMethodePossedeComptesADecouvertPourClientSansComptes() {
 		try {
-			Client c = new Client("John", "Doe", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
 			if (c.possedeComptesADecouvert()) {
 				fail("La méthode aurait du renvoyer faux");
 			}
@@ -170,7 +171,7 @@ public class TestsClient {
 	@Test
 	public void testMethodePossedeComptesADecouvertPourClientAvecUnCompteADecouvertParmisPlusieursTypesDeComptes() {
 		try {
-			Client c = new Client("John", "Doe", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			Client c = new Client("John", "Doe", "john.doe@gmail.com","20 rue Bouvier", true, "j.doe1", "password", "1234567890");
 			c.addAccount(new CompteSansDecouvert("FR1234567890", 42, c));
 			c.addAccount(new CompteSansDecouvert("FR1234567891", 0, c));
 			c.addAccount(new CompteAvecDecouvert("FR1234567892", -42, 100, c));
@@ -186,7 +187,7 @@ public class TestsClient {
 	@Test
 	public void testMethodePossedeComptesADecouvertPourClientAvecPlusieursComptesADecouvertParmisPlusieursTypesDeComptes() {
 		try {
-			Client c = new Client("John", "Doe", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			Client c = new Client("John", "Doe", "john.doe@gmail.com","20 rue Bouvier", true, "j.doe1", "password", "1234567890");
 			c.addAccount(new CompteSansDecouvert("FR1234567890", 42, c));
 			c.addAccount(new CompteSansDecouvert("FR1234567891", 0, c));
 			c.addAccount(new CompteAvecDecouvert("FR1234567892", -42, 100, c));
@@ -204,7 +205,7 @@ public class TestsClient {
 	@Test
 	public void testMethodePossedeComptesADecouvertPourClientAvecUnUniqueCompteADecouvert() {
 		try {
-			Client c = new Client("John", "Doe", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
 			c.addAccount(new CompteAvecDecouvert("FR1234567892", -42, 100, c));
 			if (!c.possedeComptesADecouvert()) {
 				fail("La méthode aurait du renvoyer vrai");
@@ -220,7 +221,7 @@ public class TestsClient {
 	@Test
 	public void testMethodeGetCompteAvecSoldeNonNulAvecDeuxComptesAvecSoldeNul(){
 		try {
-			Client c = new Client("John", "Doe", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
 			c.addAccount(new CompteAvecDecouvert("FR1234567890",0,42,c));
 			c.addAccount(new CompteSansDecouvert("FR1234567891", 0, c));
 			if (c.getComptesAvecSoldeNonNul().size()!=0){
@@ -233,7 +234,7 @@ public class TestsClient {
 	@Test
 	public void testMethodeGetCompteAvecSoldeNonNulAvecUnCompteSansDecouvertAvecSoldeNonNul(){
 		try {
-			Client c = new Client("John", "Doe", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
 			c.addAccount(new CompteAvecDecouvert("FR1234567890",0,42,c));
 			c.addAccount(new CompteSansDecouvert("FR1234567891", 1, c));
 			if (c.getComptesAvecSoldeNonNul().get("FR1234567891")==null){
@@ -246,7 +247,7 @@ public class TestsClient {
 	@Test
 	public void testMethodeGetCompteAvecSoldeNonNulAvecUnCompteAvecDecouvertAvecSoldeNonNul(){
 		try {
-			Client c = new Client("John", "Doe", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
 			c.addAccount(new CompteAvecDecouvert("FR1234567890",1,42,c));
 			c.addAccount(new CompteSansDecouvert("FR1234567891", 0, c));
 			if (c.getComptesAvecSoldeNonNul().get("FR1234567890")==null){
@@ -256,5 +257,66 @@ public class TestsClient {
 			fail("Exception récupérée -> " + e.getStackTrace().toString());
 		}
 	}
+
+	@Test
+	public void testSetUserIdClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setUserId("j.doe3");
+			Assert.assertEquals("j.doe3", c.getUserId());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
+	@Test
+	public void testSetNomClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setNom("Johnny");
+			Assert.assertEquals("Johnny", c.getNom());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
+
+	@Test
+	public void testSetPrenomClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setPrenom("Joe");
+			Assert.assertEquals("Joe", c.getPrenom());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
+
+	@Test
+	public void testSetEmailClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setEmail("test@test.test");
+			Assert.assertEquals("test@test.test", c.getEmail());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
+
+	@Test
+	public void testSetPwdClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setUserPwd("TESTTEST");
+			assertEquals("TESTTEST", c.getUserPwd());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
+
+
 
 }
