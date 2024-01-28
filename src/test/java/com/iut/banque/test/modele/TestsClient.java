@@ -1,15 +1,73 @@
 package com.iut.banque.test.modele;
 
+import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
+import org.junit.Test;
+import org.junit.Assert;
 import com.iut.banque.modele.Client;
 import com.iut.banque.modele.CompteAvecDecouvert;
 import com.iut.banque.modele.CompteSansDecouvert;
-import org.junit.Assert;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 public class TestsClient {
+
+	@Test
+	public void testSetUserIdClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setUserId("j.doe3");
+			Assert.assertEquals("j.doe3", c.getUserId());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
+	@Test
+	public void testSetNomClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setNom("Johnny");
+			Assert.assertEquals("Johnny", c.getNom());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
+
+	@Test
+	public void testSetPrenomClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setPrenom("Joe");
+			Assert.assertEquals("Joe", c.getPrenom());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
+
+	@Test
+	public void testSetEmailClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setEmail("test@test.test");
+			Assert.assertEquals("test@test.test", c.getEmail());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
+
+	@Test
+	public void testSetPwdClient(){
+		try {
+			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
+			c.setUserPwd("TESTTEST");
+			assertEquals("TESTTEST", c.getUserPwd());
+
+		} catch (Exception e) {
+			fail("Exception récupérée -> " + e.getStackTrace().toString());
+		}
+	}
 
 	/**
 	 * Tests successifs de la méthode de vérification du format de numéro de
@@ -257,66 +315,5 @@ public class TestsClient {
 			fail("Exception récupérée -> " + e.getStackTrace().toString());
 		}
 	}
-
-	@Test
-	public void testSetUserIdClient(){
-		try {
-			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
-			c.setUserId("j.doe3");
-			Assert.assertEquals("j.doe3", c.getUserId());
-
-		} catch (Exception e) {
-			fail("Exception récupérée -> " + e.getStackTrace().toString());
-		}
-	}
-	@Test
-	public void testSetNomClient(){
-		try {
-			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
-			c.setNom("Johnny");
-			Assert.assertEquals("Johnny", c.getNom());
-
-		} catch (Exception e) {
-			fail("Exception récupérée -> " + e.getStackTrace().toString());
-		}
-	}
-
-	@Test
-	public void testSetPrenomClient(){
-		try {
-			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
-			c.setPrenom("Joe");
-			Assert.assertEquals("Joe", c.getPrenom());
-
-		} catch (Exception e) {
-			fail("Exception récupérée -> " + e.getStackTrace().toString());
-		}
-	}
-
-	@Test
-	public void testSetEmailClient(){
-		try {
-			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
-			c.setEmail("test@test.test");
-			Assert.assertEquals("test@test.test", c.getEmail());
-
-		} catch (Exception e) {
-			fail("Exception récupérée -> " + e.getStackTrace().toString());
-		}
-	}
-
-	@Test
-	public void testSetPwdClient(){
-		try {
-			Client c = new Client("John", "Doe","john.doe@gmail.com", "20 rue Bouvier", true, "j.doe1", "password", "1234567890");
-			c.setUserPwd("TESTTEST");
-			assertEquals("TESTTEST", c.getUserPwd());
-
-		} catch (Exception e) {
-			fail("Exception récupérée -> " + e.getStackTrace().toString());
-		}
-	}
-
-
 
 }

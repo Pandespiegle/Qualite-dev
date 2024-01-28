@@ -10,9 +10,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflow/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Connect-Manager.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Connect-error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Connect.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/CreerCompte.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/CreerUtilisateur.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/DetailCompte.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/DetailCompteEdit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/ListeCompteManager.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/Login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/JSP/ResultatSuppression.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/xwork-conversion.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/js/jsCreerCompte.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/js/jsCreerUtilisateur.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/style/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/constants/LoginConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/Connect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerCompte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/DetailCompte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/DetailCompteEdit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ListeCompteManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ModifPw.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ResultatSuppression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/converter/AccountConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/converter/ClientConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/dao/DaoHibernate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/exceptions/IllegalFormatException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/exceptions/IllegalOperationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/exceptions/InsufficientFundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/exceptions/TechnicalException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/BanqueManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/facade/LoginManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/interfaces/IDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Banque.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Compte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/CompteAvecDecouvert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/CompteSansDecouvert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Gestionnaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/MailSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/modele/Utilisateur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/struts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/constants/TestsLoginConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/facade/TestsBanqueFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/facade/TestsBanqueManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestMail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsCompte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsCompteAvecDecouvert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/modele/TestsCompteSansDecouvert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestsBanqueFacade-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestsBanqueManager-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestsDaoHibernate-context.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +130,21 @@
       <recent name="C:\Users\hugot\Desktop\Qualite-dev\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\hugot\Desktop\Qualite-dev\photos\38" />
       <recent name="C:\Users\hugot\Desktop\Qualite-dev" />
+      <recent name="C:\Users\hugot\Desktop\Qualite-dev\src" />
+      <recent name="C:\Users\hugot\Desktop\Qualite-dev\script" />
+      <recent name="C:\Users\hugot\Desktop\Qualite-dev\photos\38" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.80">
+    <configuration name="All in _00_ASBank2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_00_ASBank2023" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="_00_ASBank2023 [clean,install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -120,7 +190,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="_00_ASBank2023:war exploded">
@@ -207,9 +277,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.All in _00_ASBank2023" />
       <item itemvalue="Maven._00_ASBank2023 [clean,install]" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.80" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in _00_ASBank2023" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration" cleanupOnStartRun="true">
@@ -238,11 +314,14 @@
       <workItem from="1698497476481" duration="517000" />
       <workItem from="1706468550639" duration="122000" />
       <workItem from="1706468953580" duration="101000" />
-      <workItem from="1706469775628" duration="946000" />
+      <workItem from="1706469775628" duration="2458000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Qualite_dev$All_in__00_ASBank2023.ic" NAME="All in _00_ASBank2023 Coverage Results" MODIFIED="1706472068422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

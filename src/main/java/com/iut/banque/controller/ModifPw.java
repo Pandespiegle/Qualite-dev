@@ -65,7 +65,7 @@ public class ModifPw extends ActionSupport {
     }
 
 
-    public void modifPw(){
+    public void tmodifPw(){
         System.out.println(pw + " " + confPw + " " + token);
     }
 

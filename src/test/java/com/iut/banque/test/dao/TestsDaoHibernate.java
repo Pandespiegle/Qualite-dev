@@ -1,19 +1,25 @@
 package com.iut.banque.test.dao;
 
-import com.iut.banque.dao.DaoHibernate;
-import com.iut.banque.exceptions.IllegalFormatException;
-import com.iut.banque.exceptions.IllegalOperationException;
-import com.iut.banque.exceptions.TechnicalException;
-import com.iut.banque.modele.*;
+import java.util.Map;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
+import org.mindrot.jbcrypt.BCrypt;
 
-import java.util.Map;
+import com.iut.banque.dao.DaoHibernate;
+import com.iut.banque.exceptions.IllegalFormatException;
+import com.iut.banque.exceptions.IllegalOperationException;
+import com.iut.banque.exceptions.TechnicalException;
+import com.iut.banque.modele.Client;
+import com.iut.banque.modele.Compte;
+import com.iut.banque.modele.CompteAvecDecouvert;
+import com.iut.banque.modele.CompteSansDecouvert;
+import com.iut.banque.modele.Gestionnaire;
+import com.iut.banque.modele.Utilisateur;
 
 import static org.junit.Assert.*;
 
@@ -36,6 +42,27 @@ public class TestsDaoHibernate {
 	// en fonction du type.
 	@Autowired
 	private DaoHibernate daoHibernate;
+
+	@Test
+	public void testUpdateAccountExist() {
+		Compte account = daoHibernate.getAccountById("SA1011011011");
+		double solde = account.getSolde();
+		double delta = 0.0001;
+		try {
+			account.crediter(10);
+		}catch (IllegalFormatException e){
+			fail("Problème de créditation du compte");
+		}
+		try {
+			daoHibernate.updateAccount(account);
+			assertEquals(daoHibernate.getAccountById("SA1011011011").getSolde(), solde+10.0, delta);
+		} catch (Exception e) {
+			fail("Le compte aurait du être supprimé.");
+		}
+
+
+
+	}
 
 	@Test
 	public void testGetAccountByIdExist() {
@@ -142,28 +169,6 @@ public class TestsDaoHibernate {
 			fail("Le compte n'a pas été supprimé.");
 		}
 	}
-
-	@Test
-	public void testUpdateAccountExist() {
-		Compte account = daoHibernate.getAccountById("SA1011011011");
-		double solde = account.getSolde();
-		double delta = 0.0001;
-		try {
-			account.crediter(10);
-		}catch (IllegalFormatException e){
-			fail("Problème de créditation du compte");
-		}
-		try {
-			daoHibernate.updateAccount(account);
-			assertEquals(daoHibernate.getAccountById("SA1011011011").getSolde(), solde+10.0, delta);
-		} catch (Exception e) {
-			fail("Le compte aurait du être supprimé.");
-		}
-
-
-
-	}
-
 
 	@Test
 	public void testGetUserByIdExist() {

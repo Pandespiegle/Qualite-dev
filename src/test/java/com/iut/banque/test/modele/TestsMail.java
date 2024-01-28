@@ -1,12 +1,11 @@
 package com.iut.banque.test.modele;
-
-import com.iut.banque.modele.MailSender;
+import static org.junit.Assert.fail;
+import com.iut.banque.modele.Client;
+import static org.junit.Assert.*;
 import org.junit.Test;
+import com.iut.banque.modele.MailSender;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-public class TestMail {
+public class TestsMail {
     @Test
     public void testSendExistingAdress() {
         MailSender mailSender = new MailSender();

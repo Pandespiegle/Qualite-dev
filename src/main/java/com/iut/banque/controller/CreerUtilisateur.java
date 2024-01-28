@@ -217,6 +217,7 @@ public class CreerUtilisateur extends ActionSupport {
 	public String creationUtilisateur() {
 		try {
 			if (client) {
+				System.out.println(email);
 				banque.createClient(userId, userPwd, nom, prenom, email, adresse, male, numClient);
 			} else {
 				banque.createManager(userId, userPwd, nom, prenom, email, adresse, male);

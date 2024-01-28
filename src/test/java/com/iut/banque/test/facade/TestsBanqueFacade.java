@@ -1,8 +1,13 @@
 package com.iut.banque.test.facade;
 
-import com.iut.banque.facade.BanqueFacade;
+import java.util.Map;
 import com.iut.banque.modele.Compte;
+import com.iut.banque.modele.Client;
+
+import com.iut.banque.facade.BanqueFacade;
+
 import com.iut.banque.modele.CompteAvecDecouvert;
+import com.iut.banque.modele.Utilisateur;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
+
 
 import static org.junit.Assert.*;
 
