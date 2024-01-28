@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SP2/SP2Jacoco.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SP2/SP2SonarLint.jpg" afterDir="false" />
-    </list>
+    <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -268,7 +265,7 @@
       <workItem from="1706468550639" duration="122000" />
       <workItem from="1706468953580" duration="101000" />
       <workItem from="1706469775628" duration="2458000" />
-      <workItem from="1706473398411" duration="2722000" />
+      <workItem from="1706473398411" duration="3151000" />
     </task>
     <servers />
   </component>
