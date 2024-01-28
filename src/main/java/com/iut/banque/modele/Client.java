@@ -239,7 +239,7 @@ public class Client extends Utilisateur {
 	 */
 	public Map<String, Compte> getComptesAvecSoldeNonNul() {
 		Map<String, Compte> comptes = this.getAccounts();
-		Map<String, Compte> res = new HashMap<>();
+		Map<String, Compte> res = new HashMap<String, Compte>();
 		for (Map.Entry<String, Compte> entry : comptes.entrySet()) {
 			if (entry.getValue().getSolde() != 0) {
 				res.put(entry.getKey(), entry.getValue());

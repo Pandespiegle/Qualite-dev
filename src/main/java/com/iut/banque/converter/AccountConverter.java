@@ -1,6 +1,5 @@
 package com.iut.banque.converter;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import java.util.Map;
 
 import org.apache.struts2.util.StrutsTypeConverter;
@@ -21,7 +20,7 @@ import com.iut.banque.modele.Compte;
  * Compte.
  */
 public class AccountConverter extends StrutsTypeConverter {
-	private static final Logger logger = LogManager.getLogger(AccountConverter.class);	/**
+		/**
 	 * DAO utilisée pour récuperer les objets correspondants à l'id passé en
 	 * paramêtre de convertFromString.
 	 * 
@@ -40,8 +39,8 @@ public class AccountConverter extends StrutsTypeConverter {
 	 * @param dao
 	 */
 	public AccountConverter(IDao dao) {
-		logger.info("=========================");
-		logger.info("Création du convertisseur de compte");
+		System.out.println("=========================");
+		System.out.println("Création du convertisseur de compte");
 		AccountConverter.dao = dao;
 	}
 
@@ -49,8 +48,8 @@ public class AccountConverter extends StrutsTypeConverter {
 	 * 	Constructeur sans paramêtre pour le AccountConverter
 	 */
 	public AccountConverter() {
-		logger.info("=========================");
-		logger.info("Création du convertisseur de compte");
+		System.out.println("=========================");
+		System.out.println("Création du convertisseur de compte");
 	}
 
 	/**

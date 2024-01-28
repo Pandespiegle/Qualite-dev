@@ -1,8 +1,7 @@
 package com.iut.banque.converter;
 
 import java.util.Map;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import org.apache.struts2.util.StrutsTypeConverter;
 
 import com.opensymphony.xwork2.conversion.TypeConversionException;
@@ -21,7 +20,6 @@ import com.iut.banque.modele.Client;
  * Client.
  */
 public class ClientConverter extends StrutsTypeConverter {
-	private static final Logger logger = LogManager.getLogger(ClientConverter.class);
 	/**
 	 * DAO utilisée pour récuperer les objets correspondants à l'id passé en
 	 * paramêtre de convertFromString.
@@ -41,8 +39,8 @@ public class ClientConverter extends StrutsTypeConverter {
 	 * @param dao
 	 */
 	public ClientConverter(IDao dao) {
-		logger.info("=========================");
-		logger.info("Création du convertisseur de client");
+		System.out.println("=========================");
+		System.out.println("Création du convertisseur de client");
 		ClientConverter.dao = dao;
 	}
 
@@ -50,8 +48,8 @@ public class ClientConverter extends StrutsTypeConverter {
 	 * Constructeur sans paramêtre pour le ClientConverter
 	 */
 	public ClientConverter() {
-		logger.info("=========================");
-		logger.info("Création du convertisseur de client");
+		System.out.println("=========================");
+		System.out.println("Création du convertisseur de client");
 	}
 
 	/**
