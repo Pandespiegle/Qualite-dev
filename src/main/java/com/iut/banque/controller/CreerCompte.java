@@ -3,8 +3,7 @@ package com.iut.banque.controller;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 import com.iut.banque.exceptions.IllegalFormatException;
@@ -15,7 +14,6 @@ import com.iut.banque.modele.Client;
 import com.iut.banque.modele.Compte;
 
 public class CreerCompte extends ActionSupport {
-	private static final Logger logger = LogManager.getLogger(CreerCompte.class);
 	private static final long serialVersionUID = 1L;
 	private String numeroCompte;
 	private boolean avecDecouvert;
@@ -79,7 +77,7 @@ public class CreerCompte extends ActionSupport {
 	 * Constructeur sans paramêtre de CreerCompte
 	 */
 	public CreerCompte() {
-		logger.info("In Constructor from CreerCompte class ");
+		System.out.println("In Constructor from CreerCompte class ");
 		ApplicationContext context = WebApplicationContextUtils
 				.getRequiredWebApplicationContext(ServletActionContext.getServletContext());
 		this.banque = (BanqueFacade) context.getBean("banqueFacade");

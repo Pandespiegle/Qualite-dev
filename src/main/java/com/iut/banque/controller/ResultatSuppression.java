@@ -7,6 +7,7 @@ import com.iut.banque.modele.Compte;
 
 public class ResultatSuppression extends ActionSupport {
 
+
 	private static final long serialVersionUID = 1L;
 	private Compte compte;
 	private Client client;

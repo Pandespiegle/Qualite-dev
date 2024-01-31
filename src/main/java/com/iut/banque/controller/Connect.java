@@ -1,8 +1,7 @@
 package com.iut.banque.controller;
 
 import java.util.Map;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import com.iut.banque.modele.MailSender;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
@@ -17,7 +16,6 @@ import com.iut.banque.modele.Compte;
 import com.iut.banque.modele.Utilisateur;
 
 public class Connect extends ActionSupport {
-	private static final Logger logger = LogManager.getLogger(Connect.class);
 	private static final long serialVersionUID = 1L;
 	private String userCde;
 	private String userPwd;
@@ -32,7 +30,7 @@ public class Connect extends ActionSupport {
 	 *         factory
 	 */
 	public Connect() {
-		logger.info("In Constructor from Connect class ");
+		System.out.println("In Constructor from Connect class ");
 		ApplicationContext context = WebApplicationContextUtils
 				.getRequiredWebApplicationContext(ServletActionContext.getServletContext());
 		this.banque = (BanqueFacade) context.getBean("banqueFacade");
@@ -47,7 +45,7 @@ public class Connect extends ActionSupport {
 	 *         échec
 	 */
 	public String login() {
-		logger.info("Essai de login - 20180512...");
+		System.out.println("Essai de login - 20180512...");
 
 		if (userCde == null || userPwd == null) {
 			return "ERROR";
@@ -64,16 +62,16 @@ public class Connect extends ActionSupport {
 
 		switch (loginResult) {
 		case LoginConstants.USER_IS_CONNECTED:
-			logger.info("user logged in");
+			System.out.println("user logged in");
 			return "SUCCESS";
 		case LoginConstants.MANAGER_IS_CONNECTED:
-			logger.info("manager logged in");
+			System.out.println("manager logged in");
 			return "SUCCESSMANAGER";
 		case LoginConstants.LOGIN_FAILED:
-			logger.info("login failed");
+			System.out.println("login failed");
 			return "ERROR";
 		default:
-			logger.info("error");
+			System.out.println("error");
 			return "ERROR";
 		}
 	}
@@ -174,7 +172,7 @@ public class Connect extends ActionSupport {
 	}
 
 	public String logout() {
-		logger.info("Logging out");
+		System.out.println("Logging out");
 		banque.logout();
 		return "SUCCESS";
 	}

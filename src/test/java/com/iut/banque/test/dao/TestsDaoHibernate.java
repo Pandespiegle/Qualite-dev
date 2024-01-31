@@ -2,6 +2,7 @@ package com.iut.banque.test.dao;
 
 import java.util.Map;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import com.iut.banque.modele.CompteAvecDecouvert;
 import com.iut.banque.modele.CompteSansDecouvert;
 import com.iut.banque.modele.Gestionnaire;
 import com.iut.banque.modele.Utilisateur;
+
 
 import static org.junit.Assert.*;
 
@@ -42,6 +44,7 @@ public class TestsDaoHibernate {
 	// en fonction du type.
 	@Autowired
 	private DaoHibernate daoHibernate;
+
 
 	@Test
 	public void testUpdateAccountExist() {

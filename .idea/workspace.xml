@@ -10,12 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a47a7b-8ea9-491f-8d3e-e1b194f95373" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestDaoWithMockito.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerCompte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerCompte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/CreerUtilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/DetailCompteEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/DetailCompteEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ResultatSuppression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iut/banque/controller/ResultatSuppression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iut/banque/test/dao/TestsDaoHibernate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,11 +91,42 @@
       <recent name="C:\Users\hugot\Desktop\Qualite-dev\photos\38" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.80">
+  <component name="RunManager" selected="JUnit.TestDaoWithMockito.testDaoIsConnected">
     <configuration name="All in _00_ASBank2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_00_ASBank2023" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDaoWithMockito" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_00_ASBank2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iut.banque.test.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iut.banque.test.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.iut.banque.test.dao.TestDaoWithMockito" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDaoWithMockito.testDaoIsConnected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_00_ASBank2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iut.banque.test.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iut.banque.test.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.iut.banque.test.dao.TestDaoWithMockito" />
+      <option name="METHOD_NAME" value="testDaoIsConnected" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,12 +263,16 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.TestDaoWithMockito" />
+      <item itemvalue="JUnit.TestDaoWithMockito.testDaoIsConnected" />
       <item itemvalue="JUnit.All in _00_ASBank2023" />
       <item itemvalue="Maven._00_ASBank2023 [clean,install]" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.80" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestDaoWithMockito.testDaoIsConnected" />
+        <item itemvalue="JUnit.TestDaoWithMockito" />
         <item itemvalue="JUnit.All in _00_ASBank2023" />
       </list>
     </recent_temporary>
@@ -256,6 +307,7 @@
       <workItem from="1706469775628" duration="2458000" />
       <workItem from="1706473398411" duration="3151000" />
       <workItem from="1706476901104" duration="5000" />
+      <workItem from="1706689354195" duration="3601000" />
     </task>
     <servers />
   </component>
